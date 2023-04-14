@@ -37,13 +37,15 @@ h1{
 }
 
 .padre {
+  background-color: salmon;
   display: flex;
   flex-wrap: wrap;
-  width: 35em;
+  width: 40em;
   height: auto;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  border-radius: 20px;
 }
 
 .elemento {
@@ -51,7 +53,7 @@ h1{
   height: 100px;
   cursor: pointer;
   border-radius: 15px;
-  border: 1px solid salmon;
+  border: 1px solid rgb(19, 18, 18);
   margin: 4px;
 }
 .elemento:hover {
