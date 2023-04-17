@@ -5,6 +5,10 @@ const tPrecio = document.getElementById("precio");
 const tPeso = document.getElementById("peso");
 const tResult = document.getElementById("precioFinal");
 
+let frutaGuardada;
+let sigo = true;
+let noSigo = false;
+
 let arrayDatosFruta = [
   {
     nombre: "Manzana",
@@ -98,15 +102,14 @@ let arrayDatosFruta = [
   },
 ];
 
-
 //Ver datos de Frutas
 function producto(fruta){
     
-    arrayDatosFruta.forEach((busca)=> {
+    arrayDatosFruta.forEach((objeto)=> {
 
-    if(fruta==busca.nombre){
-        tFruta.innerHTML=(busca.nombre);
-        tPrecio.innerHTML=(busca.precio);
+    if(fruta==objeto.nombre){
+        tFruta.innerHTML=(objeto.nombre);
+        tPrecio.innerHTML=(objeto.precio);
     }
 }
  )
@@ -114,15 +117,24 @@ function producto(fruta){
 
 
 //Pesar
-function accion1(){
-    tPeso.innerHTML= (Math.random()*8+0.4).toFixed(2);    
+function pesar(){
+    let pesoRandom = (Math.random()*8+0.4).toFixed(2);
+
+    arrayDatosFruta.forEach
+    
+    tPeso.innerHTML =  pesoRandom;  
         
     };
 
 //Calcular
-function accion4(){
-    arrayDatosFruta.forEach(busca) => {
+function calcular(){
+    
+  if (accion1 && producto){
+  
+    let result = (busca.precio*pesoRandom);
+    
+    console.log(result);
 
-        
-    }
+  }
 }
+
