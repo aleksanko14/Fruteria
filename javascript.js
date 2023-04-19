@@ -13,92 +13,92 @@ let arrayDatosFruta = [
   {
     nombre: "Manzana",
     precio: 1.6,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Naranja",
     precio: 1.8,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Cereza",
     precio: 2.0,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Frambuesa",
     precio: 1.9,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Limón",
     precio: 1.4,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Fresa",
     precio: 2.5,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Melocotón",
     precio: 2.1,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Arandano",
     precio: 2.2,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Coco",
     precio: 3.0,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Sandia",
     precio: 3.2,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Aguacate",
     precio: 2.95,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Granada",
     precio: 3.1,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Piña",
     precio: 3.0,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Kiwi",
     precio: 2.4,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
   {
     nombre: "Platano",
     precio: 3.2,
-    peso: "",
-    importe: "",
+    peso: 0,
+    importe: 0,
   },
 ];
 
@@ -119,8 +119,14 @@ function producto(fruta){
 //Pesar
 function pesar(){
     let pesoRandom = (Math.random()*8+0.4).toFixed(2);
+    let fruta = producto();
+    arrayDatosFruta.forEach((objeto)=> {
 
-    arrayDatosFruta.forEach
+      if(fruta==objeto.nombre){
+        pesoRandom=(objeto.peso);
+        console.log (objeto.peso);
+      }
+    })
     
     tPeso.innerHTML =  pesoRandom;  
         
@@ -129,7 +135,7 @@ function pesar(){
 //Calcular
 function calcular(){
     
-  if (accion1 && producto){
+  if (pesar && producto){
   
     let result = (busca.precio*pesoRandom);
     
