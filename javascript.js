@@ -1,22 +1,13 @@
-
-
-const tFruta = document.getElementById("fruta");
-const tPrecio = document.getElementById("precio");
-const tPeso = document.getElementById("peso");
-const tResult = document.getElementById("precioFinal");
-
-let frutaGuardada;
-let sigo = true;
-let noSigo = false;
-
 let arrayDatosFruta = [
   {
+    id: "Manzana",
     nombre: "Manzana",
     precio: 1.6,
     peso: 0,
     importe: 0,
   },
   {
+    id: "Naranja",
     nombre: "Naranja",
     precio: 1.8,
     peso: 0,
@@ -102,45 +93,41 @@ let arrayDatosFruta = [
   },
 ];
 
+const tFruta = document.getElementById("fruta");
+const tPrecio = document.getElementById("precio");
+const tPeso = document.getElementById("peso");
+const tResult = document.getElementById("precioFinal");
+
+let frutaGuardada = "";
+let pesoRandom = 0;
+let sigo = true;
+let noSigo = false;
+
 //Ver datos de Frutas
-function producto(fruta){
-    
-    arrayDatosFruta.forEach((objeto)=> {
-
-    if(fruta==objeto.nombre){
-        tFruta.innerHTML=(objeto.nombre);
-        tPrecio.innerHTML=(objeto.precio);
+function producto(fruta) {
+  arrayDatosFruta.forEach((objeto) => {
+    if (fruta == objeto.nombre) {
+      frutaGuardada = objeto.nombre;
+      tFruta.innerHTML = objeto.nombre;
+      tPrecio.innerHTML = objeto.precio;
     }
+  });
 }
- )
-};
-
 
 //Pesar
-function pesar(){
-    let pesoRandom = (Math.random()*8+0.4).toFixed(2);
-    let fruta = producto();
-    arrayDatosFruta.forEach((objeto)=> {
-
-      if(fruta==objeto.nombre){
-        pesoRandom=(objeto.peso);
-        console.log (objeto.peso);
-      }
-    })
-    
-    tPeso.innerHTML =  pesoRandom;  
-        
-    };
-
-//Calcular
-function calcular(){
-    
-  if (pesar && producto){
-  
-    let result = (busca.precio*pesoRandom);
-    
-    console.log(result);
-
-  }
+function pesar() {
+  pesoRandom = (Math.random() * 8 + 0.4).toFixed(2);
+  tPeso.innerHTML = pesoRandom;
 }
 
+//Calcular
+function calcular() {
+  arrayDatosFruta.forEach((fruta) => {
+    if (fruta.nombre == frutaGuardada) {
+      fruta.peso = pesoRandom;
+      fruta.importe = (pesoRandom * fruta.precio).toFixed(2);
+      tResult.innerHTML = fruta.importe;
+    }
+  });
+  console.log(arrayDatosFruta);
+}
