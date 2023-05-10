@@ -161,14 +161,14 @@
           value="Comprar"
           id="añadir"
           class="accion"
-          onclick="añadir()"
+          onclick="comprar()"
         />
       </div>
     </div>
 
     <div class="ticket">
-      <h4>FRUTIMANÍA</h4>
-      <h5>Ticket de Compra</h5>
+      <h5>FRUTIMANÍA</h5>
+      <h7>Ticket de Compra</h7>
       <hr />
       <div class="ticketElement">
         <table class="tablaTicket">
@@ -180,15 +180,17 @@
               <th class="stl">Importe<br />(€)</th>
             </tr>
           </thead>
-          <tbody id="cuerpo" class="bodyticket"></tbody>
+          <tbody id="ticketDispaly">
+
+          </tbody>
+          <tfoot id="importeTotal">
+
+          </tfoot>
         </table>
       </div>
 
-      <table name="ticketDispaly">
-        
-      </table>
       <hr>
-      <div class="importeTotalCompra"></div>
+
     </div>
   </body>
   <script src="javascript.js" lang="javascript" type="text/javascript"></script>

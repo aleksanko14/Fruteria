@@ -1,13 +1,11 @@
 let arrayDatosFruta = [
   {
-    id: "Manzana",
     nombre: "Manzana",
     precio: 1.6,
     peso: 0,
     importe: 0,
   },
   {
-    id: "Naranja",
     nombre: "Naranja",
     precio: 1.8,
     peso: 0,
@@ -93,63 +91,85 @@ let arrayDatosFruta = [
   },
 ];
 
-const tFruta = document.getElementById("fruta");
-const tPrecio = document.getElementById("precio");
-const tPeso = document.getElementById("peso");
-const tResult = document.getElementById("precioFinal");
+const dFruta = document.getElementById("fruta");
+const dPrecio = document.getElementById("precio");
+const dPeso = document.getElementById("peso");
+const dResult = document.getElementById("precioFinal");
+
+const tDisplay = document.getElementById("ticketDispaly")
+const importeTotal = document.getElementById("importeTotal")
 
 let frutaGuardada = "";
 let pesoRandom = 0;
 let sigo = true;
 let noSigo = false;
+let initialValue = 0;
 
 //Ver datos de Frutas
 function producto(fruta) {
+  
   arrayDatosFruta.forEach((objeto) => {
     if (fruta == objeto.nombre) {
       frutaGuardada = objeto.nombre;
-      tFruta.innerHTML = objeto.nombre;
-      tPrecio.innerHTML = objeto.precio;
+      dFruta.innerHTML = objeto.nombre;
+      dPrecio.innerHTML = objeto.precio;
     }
   });
 }
 
 //Pesar
 function pesar() {
+
   pesoRandom = (Math.random() * 8 + 0.4).toFixed(2);
-  tPeso.innerHTML = pesoRandom;
+  dPeso.innerHTML = pesoRandom;
 
   arrayDatosFruta.forEach((fruta) => {
     if (fruta.nombre == frutaGuardada) {
       fruta.peso = pesoRandom;
       fruta.importe = (pesoRandom * fruta.precio).toFixed(2);
-      tResult.innerHTML = fruta.importe;
+      dResult.innerHTML = fruta.importe;
     }
   });
   console.log(arrayDatosFruta);
 }
 
-//Calcular
-function calcular() {
-  // arrayDatosFruta.forEach((fruta) => {
-  //   if (fruta.nombre == frutaGuardada) {
-  //     fruta.peso = pesoRandom;
-  //     fruta.importe = (pesoRandom * fruta.precio).toFixed(2);
-  //     tResult.innerHTML = fruta.importe;
-  //   }
-  // });
-  // console.log(arrayDatosFruta);
+// Limpiar
+function limpiar(){
+
+  arrayDatosFruta.forEach((fruta) => {
+
+    fruta.peso = 0;
+    fruta.importe = 0;
+  
+  });
+  console.log(arrayDatosFruta)
+
+  dFruta.innerHTML= "";
+  dPrecio.innerHTML= null;
+  dPeso.innerHTML= null;
+  dResult.innerHTML= null;
+
+  tDisplay.innerHTML = null;
+  importeTotal.innerHTML = null;
 }
 
-function limpiar(){
+//Exportar datos al ticket (Comprar) 
+function comprar(){
+  
   arrayDatosFruta.forEach((fruta) => {
-    if (fruta.peso<0, fruta.importe<0) {
-      fruta.peso = 0;
-      fruta.importe = 0;
+
+    if (fruta.nombre == frutaGuardada) {
+      tDisplay.innerHTML += `<tr><td>${fruta.nombre}</td><td>${fruta.precio}</td><td>${fruta.peso}</td><td>${fruta.importe}</td></tr>`
+
     }
+
+    
   });
-  tFruta.innerHTML= "";
-  tPrecio.innerHTML= null;
-  tPeso.innerHTML= null;
-  tResult.innerHTML= null;
+  const sumWithInitial = arrayDatosFruta.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.importe,
+    initialValue
+  );
+    importeTotal.innerHTML = `<td colspan="4" class='importeTotalCompra'>TOTAL: ${parseFloat(sumWithInitial).toFixed(2)}€</td>`
+
+
 }
