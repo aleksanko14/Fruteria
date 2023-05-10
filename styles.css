@@ -75,4 +75,24 @@ h1{
   border-radius: 5px;
 }
 
+.ticket{
+  display: table;
+  background-image: url(./img/pngtree-light-paper-texture-textured-background-image_260958.jpg);
+  width: 550px;
+  height: auto;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  padding: 22px;
+}
+
+.tablaTicket{
+  width: 95%;
+  font-size: 0.6em;
+  border:none;
+  box-shadow: none;
+
+}
+
 

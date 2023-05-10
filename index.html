@@ -10,56 +10,186 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Frutería</title>
   </head>
   <body>
     <div>
-    <h1 class="text-center">Frutimania: La Locura de las Vitaminas</h1>
+      <h1 class="text-center">Frutimania: La Locura de las Vitaminas</h1>
     </div>
-    <br>
+    <br />
     <div class="pantalla">
-        <span class="pre">Fruta:&nbsp;</span><div id="fruta" class="ventana"></div>
-        <span class="pre">Precio/kg:&nbsp;</span><div id="precio" class="ventana"></div>
-        <span class="pre">Peso:&nbsp;</span><div id="peso" class="ventana"></div>
-        <span class="pre">Precio final:&nbsp;</span><div id="precioFinal" class="ventana"></div>
+      <span class="pre">Fruta:&nbsp;</span>
+      <div id="fruta" class="ventana"></div>
+      <span class="pre">Precio/kg:&nbsp;</span>
+      <div id="precio" class="ventana"></div>
+      <span class="pre">Peso:&nbsp;</span>
+      <div id="peso" class="ventana"></div>
+      <span class="pre">Precio final:&nbsp;</span>
+      <div id="precioFinal" class="ventana"></div>
     </div>
-    <br>
+    <br />
     <div class="padre">
-        <img src="img/manzana.jpg" alt="manzana" class="elemento" onclick="producto('Manzana')">
-        <img src="img/naranja.jpg" alt="naranja" class="elemento" onclick="producto('Naranja')">
-        <img src="img/cereza.jpg" alt="cereza" class="elemento" onclick="producto('Cereza')">
-        <img src="img/frambuesa.jpg" alt="frambuesa" class="elemento" onclick="producto('Frambuesa')">
-        <img src="img/limon.jpg" alt="limon" class="elemento" onclick="producto('Limón')">
-        
-     
-        <img src="img/fresa.jpg" alt="fresa" class="elemento" onclick="producto('Fresa')">
-        <img src="img/melocoton.jpg" alt="melocoton" class="elemento" onclick="producto('Melocotón')">
-        <img src="img/arandano.jpg" alt="arandano" class="elemento" onclick="producto('Arandano')">
-        <img src="img/coco.jpg" alt="coco" class="elemento" onclick="producto('Coco')">
-        <img src="img/sandia.jpg" alt="sandia" class="elemento" onclick="producto('Sandia')">
-      
-        <img src="img/aguacate.jpg" alt="aguacate" class="elemento" onclick="producto('Aguacate')">
-        <img src="img/granada.jpg" alt="granada" class="elemento" onclick="producto('Granada')">
-        <img src="img/piña.jpg" alt="piña" class="elemento" onclick="producto('Piña')">
-        <img src="img/kiwi.jpg" alt="kiwi" class="elemento" onclick="producto('Kiwi')">
-        <img src="img/platano.jpg" alt="platano" class="elemento" onclick="producto('Platano')">
+      <img
+        src="img/manzana.jpg"
+        alt="manzana"
+        class="elemento"
+        onclick="producto('Manzana')"
+      />
+      <img
+        src="img/naranja.jpg"
+        alt="naranja"
+        class="elemento"
+        onclick="producto('Naranja')"
+      />
+      <img
+        src="img/cereza.jpg"
+        alt="cereza"
+        class="elemento"
+        onclick="producto('Cereza')"
+      />
+      <img
+        src="img/frambuesa.jpg"
+        alt="frambuesa"
+        class="elemento"
+        onclick="producto('Frambuesa')"
+      />
+      <img
+        src="img/limon.jpg"
+        alt="limon"
+        class="elemento"
+        onclick="producto('Limón')"
+      />
+
+      <img
+        src="img/fresa.jpg"
+        alt="fresa"
+        class="elemento"
+        onclick="producto('Fresa')"
+      />
+      <img
+        src="img/melocoton.jpg"
+        alt="melocoton"
+        class="elemento"
+        onclick="producto('Melocotón')"
+      />
+      <img
+        src="img/arandano.jpg"
+        alt="arandano"
+        class="elemento"
+        onclick="producto('Arandano')"
+      />
+      <img
+        src="img/coco.jpg"
+        alt="coco"
+        class="elemento"
+        onclick="producto('Coco')"
+      />
+      <img
+        src="img/sandia.jpg"
+        alt="sandia"
+        class="elemento"
+        onclick="producto('Sandia')"
+      />
+
+      <img
+        src="img/aguacate.jpg"
+        alt="aguacate"
+        class="elemento"
+        onclick="producto('Aguacate')"
+      />
+      <img
+        src="img/granada.jpg"
+        alt="granada"
+        class="elemento"
+        onclick="producto('Granada')"
+      />
+      <img
+        src="img/piña.jpg"
+        alt="piña"
+        class="elemento"
+        onclick="producto('Piña')"
+      />
+      <img
+        src="img/kiwi.jpg"
+        alt="kiwi"
+        class="elemento"
+        onclick="producto('Kiwi')"
+      />
+      <img
+        src="img/platano.jpg"
+        alt="platano"
+        class="elemento"
+        onclick="producto('Platano')"
+      />
     </div>
-    <br>
+    <br />
     <div class="acciones">
-    <div><input type="button" value="Pesar" id="pesar" class="accion" onclick="pesar()" /></div>
-    <div><input type="button" value="Limpiar" id="limpiar" class="accion" onclick="limpiar()" /></div>
-    <div><input type="button" value="Añdair al carrito" id="añadir" class="accion" onclick="añadir()" /></div>
-    <div><input type="button" value="Calcular" id="fincompra" class="accion" onclick="calcular()" /></div>
-
+      <div>
+        <input
+          type="button"
+          value="Pesar"
+          id="pesar"
+          class="accion"
+          onclick="pesar()"
+        />
+      </div>
+      <div>
+        <input
+          type="button"
+          value="Limpiar"
+          id="limpiar"
+          class="accion"
+          onclick="limpiar()"
+        />
+      </div>
+      <div>
+        <input
+          type="button"
+          value="Comprar"
+          id="añadir"
+          class="accion"
+          onclick="añadir()"
+        />
+      </div>
     </div>
 
+    <div class="ticket">
+      <h4>FRUTIMANÍA</h4>
+      <h5>Ticket de Compra</h5>
+      <hr />
+      <div class="ticketElement">
+        <table class="tablaTicket">
+          <thead>
+            <tr>
+              <th class="concept">Articulo</th>
+              <th class="peso">Peso<br />(Kg)</th>
+              <th class="pvp">Precio<br />(€/Kg)</th>
+              <th class="stl">Importe<br />(€)</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo" class="bodyticket"></tbody>
+        </table>
+      </div>
+
+      <table name="ticketDispaly">
+        
+      </table>
+      <hr>
+      <div class="importeTotalCompra"></div>
+    </div>
   </body>
   <script src="javascript.js" lang="javascript" type="text/javascript"></script>
   <script

@@ -118,10 +118,7 @@ function producto(fruta) {
 function pesar() {
   pesoRandom = (Math.random() * 8 + 0.4).toFixed(2);
   tPeso.innerHTML = pesoRandom;
-}
 
-//Calcular
-function calcular() {
   arrayDatosFruta.forEach((fruta) => {
     if (fruta.nombre == frutaGuardada) {
       fruta.peso = pesoRandom;
@@ -130,4 +127,29 @@ function calcular() {
     }
   });
   console.log(arrayDatosFruta);
+}
+
+//Calcular
+function calcular() {
+  // arrayDatosFruta.forEach((fruta) => {
+  //   if (fruta.nombre == frutaGuardada) {
+  //     fruta.peso = pesoRandom;
+  //     fruta.importe = (pesoRandom * fruta.precio).toFixed(2);
+  //     tResult.innerHTML = fruta.importe;
+  //   }
+  // });
+  // console.log(arrayDatosFruta);
+}
+
+function limpiar(){
+  arrayDatosFruta.forEach((fruta) => {
+    if (fruta.peso<0, fruta.importe<0) {
+      fruta.peso = 0;
+      fruta.importe = 0;
+    }
+  });
+  tFruta.innerHTML= "";
+  tPrecio.innerHTML= null;
+  tPeso.innerHTML= null;
+  tResult.innerHTML= null;
 }
