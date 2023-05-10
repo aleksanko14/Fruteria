@@ -165,10 +165,17 @@ function comprar(){
 
     
   });
-  const sumWithInitial = arrayDatosFruta.reduce(
-    (accumulator, currentValue) => accumulator + currentValue.importe,
-    initialValue
-  );
+  // // const sumWithInitial = arrayDatosFruta.reduce(
+  // //   (accumulator, currentValue) => accumulator + currentValue.importe,
+  // //   initialValue
+  // );
+
+  const suma1 = arrayDatosFruta.reduce((valorAnterior, valorActual) => {
+    return valorAnterior.importe + valorActual;
+  }, 0);
+  
+  console.log(suma1);
+
     importeTotal.innerHTML = `<td colspan="4" class='importeTotalCompra'>TOTAL: ${parseFloat(sumWithInitial).toFixed(2)}€</td>`
 
 
